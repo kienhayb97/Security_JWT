@@ -1,12 +1,13 @@
 package com.spring_security.repository;
 
-import com.spring_security.model.Product;
+import com.spring_security.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Long> {
-    List<Product> findAllByNameContaining(String name);
+public interface CategoryRepository extends JpaRepository<Category, Long> {
+
+    List<Category> findAllByNameContaining(String name);
 }
